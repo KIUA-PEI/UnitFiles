@@ -1,0 +1,11 @@
+[Unit]
+Description=Deamon to request, parse and disseminate data
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=<full path to python script>
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
