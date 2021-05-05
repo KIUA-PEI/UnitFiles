@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=<full path to python script>
+ExecStart=<path_to_python_interpreter path_to_python_script start
 Restart=always
 
 [Install]
