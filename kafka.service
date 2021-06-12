@@ -1,0 +1,14 @@
+[Unit]
+Description=Apache Kafka Server
+Documentation=http://kafka.apache.org/documentation.html
+Requires=kafka-zookeeper.service
+
+[Service]
+Type=simple
+Environment=/usr/lib/jvm/java-11-openjdk-amd64
+ExecStart=/home/azureuser/kafka/bin/kafka-server-start.sh /home/azureuser/kafka/config/server.properties
+ExecStop=/home/azureuser/kafka/bin/kafka-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
